@@ -36,7 +36,7 @@ const Header = () => {
         >
             <div className="flex flex-1 flex-wrap items-center justify-between gap-4">
                 <div className="flex flex-row items-center gap-10 lg:gap-16">
-                    <a className="block flex-shrink-0">
+                    <a className="block flex-shrink-0 cursor-pointer" href="#hero">
                         <img
                             src="/logo.svg"
                             alt="logo"
