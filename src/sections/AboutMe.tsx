@@ -31,7 +31,7 @@ const AboutMe = () => {
                         with <span className="font-bold text-cyan-500">over 2 years</span> of
                         experience building and managing both the frontend and backend of websites
                         and applications to ensure they are fast, scalable, and deliver exceptional
-                        user experiences. Check out some of my work in the Projects section.
+                        user experiences. Check out some of my work in the Project section.
                         <br /> <br /> I enjoy exploring modern web technologies and best practices{' '}
                         <span className="font-bold text-cyan-500">
                             which I’ve gained through my experience in building various projects.
