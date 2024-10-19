@@ -3,7 +3,7 @@ const Footer = () => {
         <footer className="t bg-dark-navy py-4 text-center">
             <div className="flex justify-center space-x-4">
                 <a
-                    href="www.linkedin.com/in/lsabornido" // Replace with your LinkedIn URL
+                    href="https://www.linkedin.com/in/lsabornido"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-white hover:text-blue-500"
