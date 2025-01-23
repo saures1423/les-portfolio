@@ -1,5 +1,6 @@
 export const FRONT_SKILLS = [
     'React',
+    'Next',
     'React Native/Expo',
     'Vite',
     'Tailwind CSS',
@@ -7,6 +8,7 @@ export const FRONT_SKILLS = [
     'TypeScript',
     'CSS3',
     'Daisy UI',
+    'shadcn/ui',
     'Material UI',
     'React Query',
     'Zustand',
