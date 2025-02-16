@@ -26,7 +26,9 @@ export const BACK_SKILLS = [
     'CI/CD',
 ];
 
-export const DATABASE_SKILLS = ['MONGODB', 'MYSQL'];
+export const DATABASE_SKILLS = ['MongoDB', 'MySQL', 'PostgreSQL'];
+
+export const ORMs = ['Prisma', 'Drizzle'];
 
 export const ICONS = [
     { url: '/images/nodejs.png', name: 'nodejs' },
@@ -45,4 +47,5 @@ export const TECH_STACK = [
     { title: 'Frontend:', skills: FRONT_SKILLS },
     { title: 'Backend:', skills: BACK_SKILLS },
     { title: 'Databases:', skills: DATABASE_SKILLS },
+    { title: 'ORMs:', skills: DATABASE_SKILLS },
 ];
