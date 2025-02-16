@@ -47,5 +47,5 @@ export const TECH_STACK = [
     { title: 'Frontend:', skills: FRONT_SKILLS },
     { title: 'Backend:', skills: BACK_SKILLS },
     { title: 'Databases:', skills: DATABASE_SKILLS },
-    { title: 'ORMs:', skills: DATABASE_SKILLS },
+    { title: 'ORMs:', skills: ORMs },
 ];
