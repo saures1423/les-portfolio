@@ -52,7 +52,7 @@ export const PROJECTS = [
             'React Hook Form',
             'Zustand',
         ],
-        link: 'https://imotor.app/',
+        link: 'https://imotor-app.onrender.com/',
     },
 
     {
