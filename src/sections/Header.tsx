@@ -1,88 +1,147 @@
+import Container from '@/components/Container';
 import useOffSetTop from '@/hooks/useOffSetTop';
 import { cn } from '@/utils/cn';
 import { useEffect, useState } from 'react';
 
+const links = [
+    { title: 'About', link: '#about' },
+    { title: 'Experience', link: '#experience' },
+    { title: 'Projects', link: '#projects' },
+    { title: 'Contact', link: '#contact' },
+];
+
 const Header = () => {
-    const LINKS = [
-        { title: 'About', link: '#about' },
-        { title: 'Experience', link: '#exp' },
-        { title: 'Projects', link: '#projects' },
-        { title: 'Contact', link: '#contact' },
-    ];
-
-    const isoffset = useOffSetTop();
-
+    const isOffset = useOffSetTop();
     const [activeHash, setActiveHash] = useState('');
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     useEffect(() => {
-        const handleHashChange = () => {
-            setActiveHash(window.location.hash);
-        };
-
-        window.addEventListener('hashchange', handleHashChange);
+        const handleHashChange = () => setActiveHash(window.location.hash);
 
         handleHashChange();
+        window.addEventListener('hashchange', handleHashChange);
 
-        return () => {
-            window.removeEventListener('hashchange', handleHashChange);
-        };
+        return () => window.removeEventListener('hashchange', handleHashChange);
     }, []);
 
     return (
         <header
-            className={cn('fixed top-0 z-50 w-full p-4 backdrop-blur-3xl md:p-4 lg:px-10', {
-                'shadow-lg': isoffset,
-            })}
+            className={cn(
+                'fixed inset-x-0 top-0 z-50 border-b border-transparent transition-colors duration-300',
+                {
+                    'border-[#243735] bg-[#071316]/95 shadow-[0_8px_28px_rgba(0,0,0,0.2)] backdrop-blur':
+                        isOffset,
+                }
+            )}
         >
-            <div className="flex flex-1 flex-wrap items-center justify-between gap-4">
-                <div className="flex flex-row items-center gap-10 lg:gap-16">
-                    <a className="block flex-shrink-0 cursor-pointer" href="#hero">
+            <Container className="relative flex h-16 items-center justify-between gap-3 sm:h-[4.5rem] sm:gap-6">
+                <a
+                    href="#hero"
+                    className="group flex min-w-0 items-center gap-3"
+                    aria-label="Back to top"
+                >
+                    <span className="flex min-w-0 items-center gap-2.5 xl:hidden">
                         <img
-                            src="/logo.svg"
-                            alt="logo"
-                            className="w-[8rem] max-w-[6rem] sm:w-[8rem]"
+                            src="/images/meback.jpg"
+                            alt=""
+                            className="h-10 w-10 shrink-0 rounded-full border border-[#38504b] object-cover object-top"
                         />
-                    </a>
-                </div>
+                        <span className="min-w-0">
+                            <span className="block truncate text-sm font-extrabold text-[#f3f7f4]">
+                                Leslie Sabornido
+                            </span>
+                            <span className="block truncate text-xs font-medium text-[#8fa39f]">
+                                Full-stack developer
+                            </span>
+                        </span>
+                    </span>
+                    <span className="hidden h-8 w-8 shrink-0 place-items-center border border-[#d1f463] font-raleway text-sm font-extrabold text-[#d1f463] xl:grid">
+                        LS
+                    </span>
+                </a>
 
-                <div className="ml-auto items-center gap-4 font-normal sm:flex md:gap-12">
-                    <nav className="hidden md:flex">
-                        <ul className="flex gap-x-12 text-[0.84rem]">
-                            {LINKS.map((link) => (
+                <div className="flex shrink-0 items-center gap-2 sm:gap-4 xl:gap-7">
+                    <nav className="hidden xl:block" aria-label="Primary navigation">
+                        <ul className="flex items-center gap-7">
+                            {links.map((link) => (
                                 <li key={link.title}>
                                     <a
                                         href={link.link}
                                         className={cn(
-                                            'cursor-pointer text-md font-medium text-slate-200 decoration-transparent transition-all duration-300 ease-in-out hover:text-cyan-500',
+                                            'text-sm font-medium text-[#9bb0ac] transition-colors hover:text-[#d1f463]',
                                             {
-                                                'text-cyan-500': activeHash === link.link,
+                                                'text-[#d1f463]': activeHash === link.link,
                                             }
                                         )}
                                     >
-                                        <span className="text-sm font-bold text-cyan-500">
-                                            {'< '}
-                                        </span>
                                         {link.title}
-                                        <span className="text-sm font-bold text-cyan-500">
-                                            {' />'}
-                                        </span>
                                     </a>
                                 </li>
                             ))}
                         </ul>
                     </nav>
 
-                    <div className="flex items-center text-[#5BC3EB]">
-                        <a
-                            href="/resume_lsabornido.pdf"
-                            download="resume_lsabornido.pdf"
-                            className="rounded-md border border-[#5BC3EB] px-5 py-3 text-md font-medium transition-transform duration-300 hover:scale-110"
-                        >
-                            Resume
-                        </a>
-                    </div>
+                    <a
+                        href="/resume_lsabornido.pdf"
+                        download="resume_lsabornido.pdf"
+                        className="hidden border border-[#d1f463] px-3 py-2 text-xs font-bold text-[#d1f463] transition-colors hover:bg-[#d1f463] hover:text-[#071316] sm:px-4 sm:text-sm xl:inline-flex"
+                    >
+                        Resume
+                    </a>
+
+                    <button
+                        type="button"
+                        className="grid h-9 w-9 place-items-center border border-[#38504b] text-[#f3f7f4] transition-colors hover:border-[#d1f463] hover:text-[#d1f463] xl:hidden"
+                        aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+                        aria-expanded={isMenuOpen}
+                        aria-controls="mobile-navigation"
+                        onClick={() => setIsMenuOpen((isOpen) => !isOpen)}
+                    >
+                        <span className="flex w-4 flex-col gap-1" aria-hidden="true">
+                            <span className="h-px w-full bg-current" />
+                            <span className="h-px w-full bg-current" />
+                            <span className="h-px w-full bg-current" />
+                        </span>
+                    </button>
                 </div>
-            </div>
+
+                {isMenuOpen && (
+                    <nav
+                        id="mobile-navigation"
+                        className="absolute right-4 top-[calc(100%+0.5rem)] w-[min(15rem,calc(100vw-2rem))] border border-[#304441] bg-[#0b1a1d] p-2 shadow-[0_12px_30px_rgba(0,0,0,0.28)] sm:right-6 md:right-8 xl:hidden"
+                        aria-label="Mobile navigation"
+                    >
+                        <ul className="grid">
+                            {links.map((link) => (
+                                <li key={link.title}>
+                                    <a
+                                        href={link.link}
+                                        className={cn(
+                                            'block px-4 py-3 text-sm font-bold text-[#aebeba] transition-colors hover:bg-[#14282a] hover:text-[#d1f463]',
+                                            {
+                                                'text-[#d1f463]': activeHash === link.link,
+                                            }
+                                        )}
+                                        onClick={() => setIsMenuOpen(false)}
+                                    >
+                                        {link.title}
+                                    </a>
+                                </li>
+                            ))}
+                            <li className="mt-2 border-t border-[#304441] pt-2">
+                                <a
+                                    href="/resume_lsabornido.pdf"
+                                    download="resume_lsabornido.pdf"
+                                    className="block px-4 py-3 text-sm font-bold text-[#d1f463] transition-colors hover:bg-[#14282a] hover:text-[#f3f7f4]"
+                                    onClick={() => setIsMenuOpen(false)}
+                                >
+                                    Download resume
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                )}
+            </Container>
         </header>
     );
 };

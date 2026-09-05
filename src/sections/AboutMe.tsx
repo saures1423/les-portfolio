@@ -4,102 +4,101 @@ import { motion } from 'framer-motion';
 
 const AboutMe = () => {
     return (
-        <section id="about" className="flex overflow-hidden pt-24">
-            <Container className="flex flex-col gap-y-10">
+        <section id="about" className="border-b border-[#1e3331] py-24 sm:py-32">
+            <Container>
                 <motion.div
-                    className="flex flex-col items-center gap-y-5"
-                    initial={{ opacity: 0, y: 50 }}
+                    className="grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:gap-20"
+                    initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, ease: 'easeOut' }}
-                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ duration: 0.6, ease: 'easeOut' }}
+                    viewport={{ once: true, amount: 0.2 }}
                 >
-                    <p className="text-2xl font-bold text-slate-200 sm:text-4xl">About Me</p>
-
-                    <hr className="w-9 rounded-xl border-2 border-cyan-500" />
-                </motion.div>
-
-                <motion.div
-                    className="flex flex-col items-center justify-between gap-x-10 gap-y-9 lg:flex-row xl:px-28"
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, ease: 'easeOut' }}
-                    viewport={{ once: true, amount: 0.5 }}
-                >
-                    <p className="text-center font-raleway text-sm font-medium text-slate-400 sm:text-start sm:text-lg lg:max-w-xl">
-                        I'm a{' '}
-                        <span className="font-bold text-cyan-500">Full-Stack Web Developer</span>{' '}
-                        with <span className="font-bold text-cyan-500">over 2 years</span> of
-                        experience building and managing both the frontend and backend of websites
-                        and applications to ensure they are fast, scalable, and deliver exceptional
-                        user experiences. Check out some of my work in the Project section.
-                        <br /> <br /> I enjoy exploring modern web technologies and best practices{' '}
-                        <span className="font-bold text-cyan-500">
-                            which I’ve gained through my experience in building various projects.
-                        </span>{' '}
-                        <br /> <br />
-                        I'm open to job opportunities where I can contribute my skills, learn, and
-                        continue to grow. If you have an exciting opportunity that matches my
-                        expertise, don't hesitate to reach out!
-                    </p>
-
-                    <div className="w-full max-w-[23rem]">
-                        <img
-                            src="/images/me.jpg"
-                            alt="Wavy Frame"
-                            className="h-full w-full rounded-xl"
-                        />
-                    </div>
-                </motion.div>
-
-                <div className="flex flex-col gap-y-16 lg:px-28">
-                    <motion.div
-                        className="flex flex-row items-center gap-4 gap-y-5"
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, ease: 'easeOut' }}
-                        viewport={{ once: true, amount: 0.5 }}
-                    >
-                        <p className="text-2xl font-bold text-slate-200 sm:text-2xl">
-                            My Tech <span className="font-bold text-cyan-500">Stack</span>
+                    <div className="min-w-0">
+                        <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.16em] text-[#83d7c4]">
+                            <span className="h-px w-10 bg-[#83d7c4]" />
+                            About me
                         </p>
+                        <h2 className="break-anywhere mt-5 text-3xl font-extrabold leading-tight text-[#f3f7f4] sm:text-4xl lg:text-5xl">
+                            Product-minded development, end to end.
+                        </h2>
+                        <div className="mt-8 space-y-5 font-raleway text-base font-medium leading-relaxed text-[#aebeba]">
+                            <p>
+                                I&apos;m a full-stack web developer with over two years of
+                                experience creating reliable, responsive applications. I care about
+                                the handoff between design, code, and the people who use the result.
+                            </p>
+                            <p>
+                                My sweet spot is translating a real-world workflow into an interface
+                                that makes the next step obvious, backed by systems that keep pace
+                                as the product grows.
+                            </p>
+                        </div>
 
-                        <hr className="border-1 w-1/2 border-slate-600" />
-                    </motion.div>
-
-                    <motion.div
-                        className="flex flex-col items-start gap-9 md:ml-8"
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, ease: 'easeOut' }}
-                        viewport={{ once: true, amount: 0.5 }}
-                    >
-                        {TECH_STACK.map((stack) => (
-                            <div
-                                key={stack.title}
-                                className="flex w-full flex-row items-center justify-between gap-9"
-                            >
-                                <p className="w-1/6 rounded-sm border-l-2 border-l-cyan-500 pl-2 text-sm font-medium text-slate-200 sm:text-base">
-                                    {stack.title}
+                        <div className="mt-10 grid grid-cols-1 gap-6 border-y border-[#304441] py-6 sm:grid-cols-2 sm:gap-8">
+                            <div className="min-w-0">
+                                <p className="text-xl font-extrabold text-[#d1f463]">
+                                    Web + mobile
                                 </p>
-
-                                {/* Stack Skills */}
-                                <ul className="flex w-5/6 list-none flex-wrap gap-5 font-raleway text-xs font-semibold text-slate-400 md:text-sm">
-                                    {stack.skills.map((skill) => (
-                                        <li key={skill}>{skill}</li>
-                                    ))}
-                                </ul>
+                                <p className="mt-2 text-sm font-medium text-[#8fa39f]">
+                                    Responsive, accessible experiences for every screen
+                                </p>
                             </div>
-                        ))}
-                    </motion.div>
-
-                    <div className="flex grow flex-wrap items-center justify-center gap-9">
-                        {ICONS.map((icon, index) => (
-                            <div key={index} className="w-[3rem]">
-                                <img src={icon.url} alt={icon.name} className="h-full w-full" />
+                            <div className="min-w-0">
+                                <p className="text-xl font-extrabold text-[#ff8f70]">Backend</p>
+                                <p className="mt-2 text-sm font-medium text-[#8fa39f]">
+                                    Scalable APIs, data models, and third-party integrations
+                                </p>
                             </div>
-                        ))}
+                        </div>
                     </div>
-                </div>
+
+                    <div className="min-w-0 pt-1">
+                        <p className="text-sm font-bold uppercase tracking-[0.13em] text-[#f3f7f4]">
+                            Tools I reach for
+                        </p>
+                        <div className="mt-5 border-t border-[#304441]">
+                            {TECH_STACK.map((stack) => (
+                                <div
+                                    key={stack.title}
+                                    className="grid gap-4 border-b border-[#304441] py-6 sm:grid-cols-[8rem_1fr] sm:gap-8"
+                                >
+                                    <h3 className="text-sm font-extrabold text-[#d1f463]">
+                                        {stack.title.replace(':', '')}
+                                    </h3>
+                                    <ul className="flex flex-wrap gap-x-4 gap-y-2">
+                                        {stack.skills.map((skill) => (
+                                            <li
+                                                key={skill}
+                                                className="font-raleway text-sm font-semibold text-[#aebeba]"
+                                            >
+                                                {skill}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ))}
+                        </div>
+
+                        <div
+                            className="mt-10 flex flex-wrap items-center gap-3"
+                            aria-label="Technology icons"
+                        >
+                            {ICONS.map((icon) => (
+                                <div
+                                    key={icon.name}
+                                    className="grid h-11 w-11 place-items-center border border-[#304441] bg-[#0b1a1d] p-2"
+                                    title={icon.name}
+                                >
+                                    <img
+                                        src={icon.url}
+                                        alt={icon.name}
+                                        className="h-full w-full object-contain"
+                                    />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </motion.div>
             </Container>
         </section>
     );

@@ -8,13 +8,15 @@ import Projects from './sections/Projects';
 
 function App() {
     return (
-        <div className="h-full">
+        <div className="min-h-screen overflow-hidden bg-[#071316] text-[#f3f7f4]">
             <Header />
-            <Hero />
-            <AboutMe />
-            <Experience />
-            <Projects />
-            <Contact />
+            <main>
+                <Hero />
+                <AboutMe />
+                <Experience />
+                <Projects />
+                <Contact />
+            </main>
             <Footer />
         </div>
     );

@@ -23,12 +23,16 @@ export const BACK_SKILLS = [
     'JavaScript (ES6+)',
     'TypeScript',
     'AWS',
+    'Hono',
+    'Bun',
     'CI/CD',
 ];
 
 export const DATABASE_SKILLS = ['MongoDB', 'MySQL', 'PostgreSQL'];
 
 export const ORMs = ['Prisma', 'Drizzle'];
+
+export const AI_TOOLS = ['Codex', 'Antigravity', 'Gemini', 'Claude'];
 
 export const ICONS = [
     { url: '/images/nodejs.png', name: 'nodejs' },
@@ -48,4 +52,5 @@ export const TECH_STACK = [
     { title: 'Backend:', skills: BACK_SKILLS },
     { title: 'Databases:', skills: DATABASE_SKILLS },
     { title: 'ORMs:', skills: ORMs },
+    { title: 'AI Tools/LLM:', skills: AI_TOOLS },
 ];

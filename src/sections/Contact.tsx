@@ -3,39 +3,38 @@ import { motion } from 'framer-motion';
 
 const Contact = () => {
     return (
-        <section id="contact" className="flex pt-24">
-            <Container className="mb-32 flex flex-col gap-y-10">
+        <section
+            id="contact"
+            className="border-t border-[#1e3331] bg-[#d1f463] py-16 sm:py-20 lg:py-28"
+        >
+            <Container>
                 <motion.div
-                    className="flex flex-col items-center gap-y-5"
-                    initial={{ opacity: 0, y: 50 }}
+                    className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-end"
+                    initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, ease: 'easeOut' }}
-                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ duration: 0.6, ease: 'easeOut' }}
+                    viewport={{ once: true, amount: 0.2 }}
                 >
-                    <p className="text-2xl font-bold text-slate-200 sm:text-4xl">Get In Touch</p>
-
-                    <hr className="w-9 rounded-xl border-2 border-cyan-400" />
-                </motion.div>
-
-                <motion.div
-                    className="flex h-full flex-col items-center justify-start gap-y-16 xl:px-28"
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, ease: 'easeOut' }}
-                    viewport={{ once: true, amount: 0.5 }}
-                >
-                    <div className="flex flex-col gap-9">
-                        <h4 className="max-w-sm text-center font-raleway text-sm font-medium leading-relaxed text-slate-300 md:text-base">
-                            I’d love to hear from you! Whether you have a question, want to discuss
-                            a project, or just want to connect, feel free to reach out.
-                        </h4>
+                    <div className="min-w-0">
+                        <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.16em] text-[#1d4038]">
+                            <span className="h-px w-10 bg-[#1d4038]" />
+                            Get in touch
+                        </p>
+                        <h2 className="break-anywhere mt-5 max-w-3xl text-3xl font-extrabold leading-tight text-[#071316] sm:text-4xl lg:text-6xl">
+                            Have a product taking shape? Let&apos;s make it real.
+                        </h2>
                     </div>
 
-                    <div className="flex items-center text-cyan-500">
-                        <a href="mailto:lsabornido97@gmail.com">
-                            <button className="rounded-md border border-cyan-500 px-8 py-4 text-base font-semibold transition-transform duration-300 hover:scale-110">
-                                Say Hello
-                            </button>
+                    <div className="min-w-0 lg:pb-1">
+                        <p className="max-w-md font-raleway text-base font-semibold leading-relaxed text-[#1d4038]">
+                            I&apos;m open to full-stack and front-end opportunities, freelance work,
+                            and conversations with teams building something useful.
+                        </p>
+                        <a
+                            href="mailto:lsabornido97@gmail.com"
+                            className="mt-7 inline-flex max-w-full break-all bg-[#071316] px-5 py-3.5 text-sm font-extrabold text-[#f3f7f4] transition-colors hover:bg-[#1d4038]"
+                        >
+                            lsabornido97@gmail.com
                         </a>
                     </div>
                 </motion.div>
