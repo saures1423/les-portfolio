@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Product path concept</title>
+  <desc id="desc">A continuous path connects interface brackets to a central product node.</desc>
+  <path d="M22 13H11v38h11M42 13h11v38H42" fill="none" stroke="#D1F463" stroke-width="4" stroke-linecap="square"/>
+  <path d="M20 39c0-9 5-16 12-16s12 7 12 16" fill="none" stroke="#F3F7F4" stroke-width="4"/>
+  <circle cx="32" cy="23" r="5" fill="#FF8F70"/>
+</svg>

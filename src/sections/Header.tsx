@@ -55,8 +55,12 @@ const Header = () => {
                             </span>
                         </span>
                     </span>
-                    <span className="hidden h-8 w-8 shrink-0 place-items-center border border-[#d1f463] font-raleway text-sm font-extrabold text-[#d1f463] xl:grid">
-                        LS
+                    <span className="hidden h-10 w-10 shrink-0 xl:block" aria-hidden="true">
+                        <img
+                            src="/brand/leslie-sabornido-mark.svg"
+                            alt=""
+                            className="h-full w-full"
+                        />
                     </span>
                 </a>
 

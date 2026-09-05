@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Stack concept</title>
+  <desc id="desc">Three offset layers form an abstract S above a strong L foundation.</desc>
+  <path d="M13 10h38v8H21v9h30v8H13z" fill="#D1F463"/>
+  <path d="M13 43h30v-8h8v16H13z" fill="#F3F7F4"/>
+  <rect x="43" y="27" width="8" height="8" fill="#FF8F70"/>
+</svg>

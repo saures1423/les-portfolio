@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 220" role="img" aria-labelledby="title desc">
+  <title id="title">Leslie Sabornido logo preview</title>
+  <desc id="desc">The Open Frame logo presented on the portfolio's deep green background.</desc>
+  <rect width="660" height="220" fill="#071316"/>
+  <g transform="translate(52 46) scale(2)">
+    <path d="M10 8v43h19" fill="none" stroke="#D1F463" stroke-width="5" stroke-linecap="square" stroke-linejoin="miter"/>
+    <path d="M52 15H37c-6 0-10 3.5-10 8.5S31 32 37 32h4c7 0 11 3.5 11 9.5S47 51 40 51H27" fill="none" stroke="#F3F7F4" stroke-width="5" stroke-linecap="square"/>
+    <path d="M43 8h11v11M10 57h12" fill="none" stroke="#FF8F70" stroke-width="2"/>
+  </g>
+  <g font-family="Arial, sans-serif">
+    <text x="208" y="105" fill="#F3F7F4" font-size="34" font-weight="700" letter-spacing="0">LESLIE SABORNIDO</text>
+    <text x="210" y="139" fill="#8FA39F" font-size="16" font-weight="700" letter-spacing="2.2">FULL-STACK DEVELOPER</text>
+  </g>
+</svg>
