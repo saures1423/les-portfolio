@@ -17,7 +17,7 @@ const Contact = () => {
                 >
                     <div className="min-w-0">
                         <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.16em] text-[#1d4038]">
-                            <span className="h-px w-10 bg-[#1d4038]" />
+                            {/* <span className="bg-[#1d4038] w-10 h-px" /> */}
                             Get in touch
                         </p>
                         <h2 className="break-anywhere mt-5 max-w-3xl text-3xl font-extrabold leading-tight text-[#071316] sm:text-4xl lg:text-6xl">

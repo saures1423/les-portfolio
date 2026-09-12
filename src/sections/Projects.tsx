@@ -15,7 +15,7 @@ const Projects = () => {
                     <div className="grid gap-6 border-b border-[#304441] pb-10 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:items-end">
                         <div className="min-w-0">
                             <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.16em] text-[#d1f463]">
-                                <span className="h-px w-10 bg-[#d1f463]" />
+                                {/* <span className="bg-[#d1f463] w-10 h-px" /> */}
                                 Selected work
                             </p>
                             <h2 className="break-anywhere mt-5 text-3xl font-extrabold text-[#f3f7f4] sm:text-4xl lg:text-5xl">

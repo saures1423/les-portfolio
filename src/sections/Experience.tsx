@@ -41,7 +41,7 @@ const Experience = () => {
                     <div className="grid gap-6 border-b border-[#304441] pb-10 md:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] md:items-end">
                         <div className="min-w-0">
                             <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.16em] text-[#ff8f70]">
-                                <span className="h-px w-10 bg-[#ff8f70]" />
+                                {/* <span className="bg-[#ff8f70] w-10 h-px" /> */}
                                 Experience
                             </p>
                             <h2 className="break-anywhere mt-5 text-3xl font-extrabold text-[#f3f7f4] sm:text-4xl lg:text-5xl">

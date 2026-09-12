@@ -23,7 +23,7 @@ const Hero = () => {
                     transition={{ duration: 0.7, ease: 'easeOut' }}
                 >
                     <p className="mb-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-[0.65rem] font-bold uppercase leading-relaxed tracking-[0.12em] text-[#d1f463] sm:text-xs sm:tracking-[0.16em]">
-                        <span className="h-px w-10 bg-[#d1f463]" />
+                        {/* <span className="bg-[#d1f463] w-10 h-px" /> */}
                         <span className="min-w-0">Full-stack developer</span>
                     </p>
                     <h1 className="break-anywhere max-w-3xl text-[2.6rem] font-extrabold leading-[0.95] text-[#f3f7f4] sm:text-6xl xl:text-7xl">

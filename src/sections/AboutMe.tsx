@@ -15,7 +15,7 @@ const AboutMe = () => {
                 >
                     <div className="min-w-0">
                         <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.16em] text-[#83d7c4]">
-                            <span className="h-px w-10 bg-[#83d7c4]" />
+                            {/* <span className="bg-[#83d7c4] w-10 h-px" /> */}
                             About me
                         </p>
                         <h2 className="break-anywhere mt-5 text-3xl font-extrabold leading-tight text-[#f3f7f4] sm:text-4xl lg:text-5xl">
