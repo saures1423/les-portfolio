@@ -17,7 +17,7 @@ export const PROJECTS: Project[] = [
         image_path: '/projects/thesora.webp',
         image_alt: 'Thesora collaborative thesis and capstone workspace preview',
         desc: `Thesora is a collaborative thesis and capstone project workspace for managing milestones, tasks, deliverables, revisions, adviser feedback, resources, and overall project progress—from proposal to defense.`,
-        techs: ['React JS', 'Vite'],
+        techs: ['Bun', 'Hono', 'React', 'Tanstack', 'PostgreSQL', 'TypeScript'],
         link: 'https://www.thesora.site',
         category: 'Personal project',
         featured: true,
