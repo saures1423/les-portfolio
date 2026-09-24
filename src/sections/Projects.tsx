@@ -31,7 +31,7 @@ const Projects = () => {
 
                     <div className="mt-12 grid gap-5 md:grid-cols-2">
                         {PROJECTS.map((project, index) => {
-                            const isLeadProject = index === 0;
+                            const isLeadProject = project.featured ?? false;
 
                             return (
                                 <motion.article
@@ -59,14 +59,17 @@ const Projects = () => {
                                     >
                                         <img
                                             src={project.image_path}
-                                            alt={`Screenshot of ${project.title}`}
+                                            alt={
+                                                project.image_alt ??
+                                                `Screenshot of ${project.title}`
+                                            }
                                             className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
                                         />
                                     </div>
 
                                     <div className="flex min-w-0 flex-col p-5 sm:p-7">
                                         <p className="text-[0.7rem] font-bold uppercase tracking-[0.13em] text-[#83d7c4]">
-                                            {index === 0 ? 'Featured product' : 'Product build'}
+                                            {project.category ?? 'Product build'}
                                         </p>
                                         <h3 className="break-anywhere mt-3 text-2xl font-extrabold text-[#f3f7f4]">
                                             {project.title}

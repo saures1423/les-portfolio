@@ -1,4 +1,27 @@
-export const PROJECTS = [
+type ProjectCategory = 'Personal project' | 'Featured product' | 'Product build';
+
+type Project = {
+    title: string;
+    image_path: string;
+    image_alt?: string;
+    desc: string;
+    techs: string[];
+    link: string;
+    category?: ProjectCategory;
+    featured?: boolean;
+};
+
+export const PROJECTS: Project[] = [
+    {
+        title: 'Thesora',
+        image_path: '/projects/thesora.webp',
+        image_alt: 'Thesora collaborative thesis and capstone workspace preview',
+        desc: `Thesora is a collaborative thesis and capstone project workspace for managing milestones, tasks, deliverables, revisions, adviser feedback, resources, and overall project progress—from proposal to defense.`,
+        techs: ['React JS', 'Vite'],
+        link: 'https://www.thesora.site',
+        category: 'Personal project',
+        featured: true,
+    },
     {
         title: 'Iweft Dashboard',
         image_path: '/projects/iweft-dashboard.png',
@@ -23,6 +46,8 @@ export const PROJECTS = [
             'Zustand',
         ],
         link: 'https://admin.iweft.com/',
+        category: 'Featured product',
+        featured: true,
     },
 
     {

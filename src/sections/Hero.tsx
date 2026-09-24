@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const highlights = [
     { value: '2+ years', label: 'Professional experience' },
-    { value: '7 projects', label: 'Featured case studies' },
+    { value: '8 projects', label: 'Featured case studies' },
     { value: 'MERN', label: 'Core stack' },
 ];
 
